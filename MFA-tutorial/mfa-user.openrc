@@ -1,0 +1,15 @@
+# unset any OS_ variables that conflict with token-token authentication
+unset OS_USERNAME
+unset OS_USER_DOMAIN_NAME
+unset OS_REGION_NAME
+unset OS_INTERFACE
+unset OS_PASSWORD
+
+# variables which are mandatory for the token-only authentication are:
+# - OS_TOKEN
+# - OS_PROJECT_NAME
+# - OS_PROJECT_DOMAIN_NAME
+# - OS_AUTH_URL
+# (those variables should still be exported from the previous scripts and RC file)
+export OS_INTERFACE=public
+export OS_AUTH_TYPE=token
